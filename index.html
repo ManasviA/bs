@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>jQuery UI Draggable - Snap to element or grid</title>
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="style.css">
+  <style>
+  .draggable { width: 90px; height: 80px; padding: 5px; float: left; margin: 0 10px 10px 0; font-size: .9em; }
+  .ui-widget-header p, .ui-widget-content p { margin: 0; }
+  #snaptarget { height: 140px; }
+  </style>
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+ <script>
+     $( function() {
+        $( ".shipcontainer" ).draggable({ grid: [ 32, 32 ] });
+     })
+  </script>
+ 
+</head>
+<body>
+    <div class="bfboard">
+    
+    <div class="shipcontainer">
+        <div class="ship"></div>
+        <div class="ship1"></div>
+    </div>
+ 
+    <table class="bftable">
+        <tr class="bfrow">
+            <td class="bfcell"></td>
+            <td class="bfcell"></td>
+            <td class="bfcell"></td>
+        </tr>
+        <tr class="bfrow">
+            <td class="bfcell"></td>
+            <td class="bfcell"></td>
+            <td class="bfcell"></td>
+        </tr>
+        <tr class="bfrow">
+            <td class="bfcell"></td>
+            <td class="bfcell"></td>
+            <td class="bfcell"></td>
+        </tr>
+    </table>
+    </div>
+ 
+</body>
+</html>
