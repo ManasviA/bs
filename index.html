@@ -13,39 +13,26 @@
   </style>
   <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
- <script>
-     $( function() {
-        $( ".shipcontainer" ).draggable({ grid: [ 32, 32 ] });
-     })
-  </script>
  
 </head>
 <body>
-    <div class="bfboard">
-    
-    <div class="shipcontainer">
-        <div class="ship"></div>
-        <div class="ship1"></div>
-    </div>
- 
-    <table class="bftable">
-        <tr class="bfrow">
-            <td class="bfcell"></td>
-            <td class="bfcell"></td>
-            <td class="bfcell"></td>
-        </tr>
-        <tr class="bfrow">
-            <td class="bfcell"></td>
-            <td class="bfcell"></td>
-            <td class="bfcell"></td>
-        </tr>
-        <tr class="bfrow">
-            <td class="bfcell"></td>
-            <td class="bfcell"></td>
-            <td class="bfcell"></td>
-        </tr>
-    </table>
-    </div>
- 
+    <div id="gamediv"></div>
+    <script src="script.js"></script>
+    <script>
+        var gameConfig = {
+            height:10,
+            width:10,
+            ships:[{
+                lines:[[3,0,0],[3,1,1]]
+            },{
+                lines:[[3,0,0]]
+            },{
+                lines:[[3,0,0]]
+            },{
+                lines:[[3,0,0]]
+            }]
+        }
+        new BattleShip(document.getElementById('gamediv'),gameConfig).init();
+    </script>
 </body>
 </html>

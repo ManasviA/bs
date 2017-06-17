@@ -39,6 +39,8 @@ table {
 }
 .shipcontainer {
 	position:absolute;
-	top:2em;
-	left:2em;
+}
+.shipline {
+	position:absolute;
+	background:blue;
 }
